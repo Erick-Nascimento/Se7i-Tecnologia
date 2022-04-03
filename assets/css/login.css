@@ -1,0 +1,223 @@
+:root {
+    --black: #333333;
+    --white: #ffffff;
+    --green: #00924C;
+    --green2: #2ac5b3;
+}
+
+body{
+    background-color: var(--green2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.loginContainer{
+    display: flex;
+    width: 60vw;
+    height: 60vh;
+    
+}
+
+.loginContainer .Container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.loginContainer .Container .leftContainer{
+    width: 45%;
+    height: 100%;
+    background-color: var(--black);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginContainer .Container .leftContainer .loginImage{
+    width: 100%;
+    height: 100%;
+}
+
+.loginContainer .Container .leftContainer img{
+    object-fit: contain;
+}
+
+.loginContainer .Container .rightContainer{
+    width: 55%;
+    height: 100%;
+    background-color: var(--white);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.loginContainer .Container .rightContainer .firstrightContainer{
+    box-sizing: border-box;
+    padding: 5%;
+    height: 100%;
+}
+
+.loginContainer .Container .rightContainer .firstrightContainer .loginPhoto{
+    text-align: center;
+}
+
+.loginContainer .Container .rightContainer .firstrightContainer .loginPhoto img{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: 3px solid var(--green2);
+    background-color: var(--black);
+}
+
+.loginContainer .Container .rightContainer .firstrightContainer .titleForm{
+    margin: 20px 0 30px 0;
+    text-align: center;
+}
+
+.loginContainer .Container .rightContainer .firstrightContainer .titleForm h2{
+    color: var(--white);
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1.6rem;
+    text-shadow: 2px 2px 6px black;
+    
+}
+
+.loginContainer .Container .rightContainer .firstrightContainer form{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.loginContainer .Container .rightContainer .firstrightContainer .form{
+    display: flex;
+    justify-content: center; 
+}
+
+.loginContainer .Container .rightContainer .firstrightContainer .form .loginButton{
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1.1rem;
+}
+
+.loginContainer .Container .rightContainer .firstrightContainer .form .forgotPassword{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 5% 0;
+}
+
+/*Estilização do Formulário*/
+.group{ 
+    position:relative; 
+    margin-bottom:45px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.group input{
+    font-size:18px;
+    box-sizing: border-box;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width: 100%;
+    border:none;
+    border-bottom:1px solid var(--black);
+    background-color: inherit;
+}
+
+.group input:focus{
+    outline:none;
+    border-bottom-color: var(--green2);
+}
+
+.group label{
+    color:var(--black); 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label{
+    top:-20px;
+    font-size:16px;
+    color:var(--green2);
+}
+
+.bar{ 
+    position:relative; 
+    display:block; 
+    width: 100%;
+}
+
+.bar:before, .bar:after{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:var(--green2); 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
