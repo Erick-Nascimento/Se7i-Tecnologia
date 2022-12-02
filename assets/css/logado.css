@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;900&display=swap');
+
+:root {
+    --black: #333333;
+    --white: #ffffff;
+    --green: #00924C;
+    --green2: #2ac5b3;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+header{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: var(--black);
+}
+
+header .headerContainer{
+    width: 55vw;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+}
+
+header .headerContainer .logo{
+    width: 20%;
+}
+
+header .headerContainer .logo img{
+    width: 70px;
+}
+
+nav{
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav .menu{
+    display: flex;
+    
+}
+
+nav .menu .ulMenu{
+    display: flex;
+    color: var(--white);
+    
+}
+
+nav .menu .ulMenu .menuItems{
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.headerContainer .userPhoto{
+    display: flex;
+    width: 10%;
+    justify-content: flex-end;
+}
+
+.headerContainer .userPhoto .user img{
+    width: 55px;
+}
+
+.headerContainer .userPhoto .patent img{
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -20px;
+}
+
+.headerContainer .userPhoto .downArrow{
+    margin-left: 12%;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    font-size: 14px;
+    cursor: pointer;
+}
